@@ -12,3 +12,6 @@ actix-files = "0.1"
 serde = { version = "1.0", features = ["derive"] }
 failure = "0.1"
 env_logger = "0.7"
+r2d2 = "0.8"
+r2d2_mysql = "16"
+mysql = "16"
