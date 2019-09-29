@@ -36,6 +36,7 @@ fn main() -> std::io::Result<()> {
         App::new()
             .wrap(Logger::default())
             .service(web::resource("/initialize").route(web::post().to(post_initialize)))
+            .service(actix_files::Files::new("/", "../public"))
     })
     .bind("127.0.0.1:8000")?
     .run()
